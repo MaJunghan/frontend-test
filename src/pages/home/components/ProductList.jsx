@@ -15,6 +15,14 @@ import { pick } from '@/utils/common';
 
 const PRODUCT_PAGE_LIMIT = 20;
 
+// productList 기준으로 통합 테스트 코드를 작성한다면
+// 1. 상품 리스트 조회 API에 맞게 상품 정보(상품명, 가격, 상품 이미지)가 잘 렌더링 되는지
+// 2. 상품을 클릭 했을 때 navigate 모킹을 통해 상세화면으로 이동하는지
+// 3. 장바구니, 구매 버튼을 눌렀을 때
+//  - 로그인 : 상품 추가 후 장바구니로 이동
+//  - 비로그인 : 로그인 페이지로 이동
+// 4. 상품 리스트가 더 있는 경우 show more 버튼이 노출되며, 이를 통해 데이터를 더 가져 올 수 있는지
+
 const ProductList = ({ limit = PRODUCT_PAGE_LIMIT }) => {
   const navigate = useNavigate();
   const filter = useFilterStore(state =>

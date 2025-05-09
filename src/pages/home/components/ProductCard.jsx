@@ -15,6 +15,14 @@ import { pageRoutes } from '@/apiRoutes';
 import { pathToUrl } from '@/helpers/url';
 import { formatPrice } from '@/utils/formatter';
 
+// productCard 기준으로 단위 테스트 코드를 작성한다면
+// 1. productProp 기준으로 상품 정보(상품명, 가격, 상품 이미지)가 잘 렌더링 되는지
+// 2. 상품을 클릭 했을 때 navigate 모킹을 통해 상세화면으로 이동하는지
+// 3. 장바구니, 구매 버튼을 눌렀을 때 spy 함수를 통해 각 핸들러가 호출되는지
+
+// 스파이 함수에서 onClick 함수의 호출 여부만 검증 -> 사용자가 productCard를 눌렀을때에 동작을 검증 불가
+// API에서 주는 데이터 기준으로 올바르게 렌더링 되는지도 검증 불가
+
 const ProductCard = ({
   product,
   onClickAddCartButton,
