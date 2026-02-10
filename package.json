@@ -18,7 +18,7 @@
     "@mui/lab": "5.0.0-alpha.124",
     "@mui/material": "^5.11.10",
     "@tanstack/react-query": "^4.29.23",
-    "axios": "^1.4.0",
+    "axios": "^1.13.5",
     "body-parser": "^1.20.2",
     "classnames": "^2.3.2",
     "cookie-parser": "^1.4.6",
